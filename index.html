@@ -4,24 +4,53 @@
   <title>My Art</title>
   <style>
     body {
-      background-color: #111;
+      background: #111;
       color: white;
       font-family: Arial;
       text-align: center;
     }
-    img {
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .card {
+      text-decoration: none;
+      color: white;
+    }
+
+    .card img {
       width: 300px;
-      margin: 10px;
-      border-radius: 8px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
     }
   </style>
 </head>
 
 <body>
   <h1>My Art</h1>
-  <p>A small collection of my work</p>
+  <p>Select a collection</p>
 
-  <img src="art1.jpg">
-  <img src="art2.jpg">
+  <div class="container">
+    <a href="painting.html" class="card">
+      <img src="painting/p1.jpg">
+      <h2>Painting</h2>
+    </a>
+
+    <a href="digital.html" class="card">
+      <img src="digital/d1.jpg">
+      <h2>Digital</h2>
+    </a>
+  </div>
 </body>
 </html>
